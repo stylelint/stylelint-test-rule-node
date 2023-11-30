@@ -1,0 +1,14 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  lint:
+    uses: stylelint/.github/.github/workflows/lint.yml@main
+
+  test:
+    uses: stylelint/.github/.github/workflows/test.yml@main
