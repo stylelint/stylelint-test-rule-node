@@ -1,0 +1,64 @@
+{
+  "name": "stylelint-test-rule-node",
+  "version": "0.0.1",
+  "description": "A Stylelint rule tester using Node.js built-in test runner.",
+  "keywords": [
+    "stylelint",
+    "test"
+  ],
+  "repository": "stylelint/stylelint-test-rule-node",
+  "license": "MIT",
+  "author": "stylelint",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "files": [
+    "index.d.ts"
+  ],
+  "scripts": {
+    "format": "prettier . --write",
+    "lint": "npm-run-all --parallel lint:*",
+    "lint:formatting": "prettier . --check",
+    "lint:js": "eslint .",
+    "lint:md": "remark . --quiet --frail",
+    "lint:types": "tsc",
+    "release": "np --no-release-draft",
+    "pretest": "npm run lint",
+    "test": "echo \"TODO\"",
+    "watch": "npm --ignore-scripts test -- --watch",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.{js,json,md,yml}": "prettier --write"
+  },
+  "prettier": "@stylelint/prettier-config",
+  "eslintConfig": {
+    "extends": [
+      "stylelint"
+    ],
+    "reportUnusedDisableDirectives": true,
+    "root": true
+  },
+  "remarkConfig": {
+    "plugins": [
+      "@stylelint/remark-preset"
+    ]
+  },
+  "devDependencies": {
+    "@stylelint/prettier-config": "^3.0.0",
+    "@stylelint/remark-preset": "^5.0.0",
+    "eslint": "^8.54.0",
+    "eslint-config-stylelint": "^20.0.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.1.0",
+    "np": "^9.0.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.1.0",
+    "remark-cli": "^12.0.0",
+    "stylelint": "^16.0.0-3",
+    "typescript": "^5.3.2"
+  },
+  "engines": {
+    "node": ">=18.12.0"
+  }
+}
