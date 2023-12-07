@@ -14,7 +14,7 @@ npm install stylelint-test-rule-node stylelint --save-dev
 
 ## Usage
 
-Write a test file for rules you want to test. For example:
+First, write a test file for rules you want to test. For example:
 
 ```js
 // block-no-empty.test.js
