@@ -20,7 +20,7 @@
     "format": "prettier . --write",
     "lint": "npm-run-all --parallel lint:*",
     "lint:formatting": "prettier . --check",
-    "_lint:js": "eslint .",
+    "lint:js": "eslint .",
     "lint:md": "remark . --quiet --frail",
     "lint:types": "tsc",
     "release": "np --no-release-draft",
