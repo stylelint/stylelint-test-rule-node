@@ -25,7 +25,7 @@
     "lint:types": "tsc",
     "release": "np --no-release-draft",
     "pretest": "npm run lint",
-    "test": "echo \"TODO\"",
+    "test": "node --test",
     "watch": "npm --ignore-scripts test -- --watch",
     "prepare": "husky install"
   },
