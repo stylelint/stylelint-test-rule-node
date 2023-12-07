@@ -9,10 +9,11 @@
   "repository": "stylelint/stylelint-test-rule-node",
   "license": "MIT",
   "author": "stylelint",
-  "main": "index.js",
-  "types": "index.d.ts",
+  "type": "module",
+  "exports": "./lib/index.js",
+  "types": "lib/index.d.ts",
   "files": [
-    "index.d.ts"
+    "lib/**/*"
   ],
   "scripts": {
     "format": "prettier . --write",
@@ -20,7 +21,7 @@
     "lint:formatting": "prettier . --check",
     "_lint:js": "eslint .",
     "lint:md": "remark . --quiet --frail",
-    "_lint:types": "tcs",
+    "lint:types": "tsc",
     "release": "np --no-release-draft",
     "pretest": "npm run lint",
     "test": "echo \"TODO\"",
@@ -47,6 +48,8 @@
   "devDependencies": {
     "@stylelint/prettier-config": "^3.0.0",
     "@stylelint/remark-preset": "^5.0.0",
+    "@tsconfig/node18": "^18.2.2",
+    "@tsconfig/strictest": "^2.0.2",
     "eslint": "^8.54.0",
     "eslint-config-stylelint": "^20.0.0",
     "husky": "^8.0.3",
