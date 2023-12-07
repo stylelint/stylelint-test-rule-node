@@ -177,8 +177,8 @@ export type RuleConfigTestCase = {
  * A test schema for a rule configuration.
  */
 export type RuleConfigTestSchema = Pick<TestSchema, 'ruleName' | 'plugins' | 'only' | 'skip'> & {
-	accept?: ConfigCase[];
-	reject?: ConfigCase[];
+	accept?: RuleConfigTestCase[];
+	reject?: RuleConfigTestCase[];
 };
 
 /**
