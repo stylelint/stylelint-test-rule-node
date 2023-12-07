@@ -14,7 +14,47 @@ npm install stylelint-test-rule-node stylelint --save-dev
 
 ## Usage
 
-This package provides the following helper functions to help you test your custom rules or plugins.
+Write a test file for rules you want to test. For example:
+
+```js
+// block-no-empty.test.js
+import { testRule } from "stylelint-test-rule-node";
+
+testRule({
+  ruleName: "block-no-empty",
+  config: true,
+
+  accept: [
+    {
+      code: "a { color: red }"
+    }
+  ],
+
+  reject: [
+    {
+      code: "a {}",
+      message: "Unexpected empty block (block-no-empty)"
+    }
+  ]
+});
+```
+
+Then, run the test via `node --test`:
+
+```sh-session
+$ node --test block-no-empty.test.js
+...
+▶ block-no-empty (28.773291ms)
+
+ℹ tests 2
+ℹ suites 7
+ℹ pass 2
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 158.194084
+```
 
 See also the [type definitions](lib/index.d.ts) for more details.
 
@@ -26,6 +66,8 @@ For example, we can test a plugin that enforces and autofixes kebab-case class s
 
 ```js
 // my-plugin.test.js
+import { testRule } from "stylelint-test-rule-node";
+
 import myPlugin from "./my-plugin.js";
 
 const plugins = [myPlugin];
@@ -94,6 +136,8 @@ The `testRuleConfigs` function enables you to test invalid configs for a rule.
 For example:
 
 ```js
+import { testRuleConfigs } from "stylelint-test-rule-node";
+
 testRuleConfigs({
   plugins,
   ruleName,
