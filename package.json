@@ -13,7 +13,8 @@
   "exports": "./lib/index.js",
   "types": "lib/index.d.ts",
   "files": [
-    "lib/**/*"
+    "lib/**",
+    "!**/__tests__/**"
   ],
   "scripts": {
     "format": "prettier . --write",
