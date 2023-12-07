@@ -3,28 +3,28 @@
  */
 export type TestCase = {
 	/**
-	 * The code of the test case.
+	 * Code of the test case.
 	 */
 	code: string;
 
 	/**
 	 * Description of the test case.
 	 */
-	description?: string;
+	description?: string | undefined;
 
 	/**
-	 * Maps to Jest's `test.only`. Default: `false`.
+	 * Whether to run only the test case. Default: `false`.
 	 *
-	 * @see https://jestjs.io/docs/en/api#testonlyname-fn-timeout
+	 * @see https://nodejs.org/api/test.html#only-tests
 	 */
-	only?: boolean;
+	only?: boolean | undefined;
 
 	/**
-	 * Maps to Jest's `test.skip`. Default: `false`.
+	 * Whether to skip the test case. Default: `false`.
 	 *
-	 * @see https://jestjs.io/docs/api#testskipname-fn
+	 * @see https://nodejs.org/api/test.html#skipping-tests
 	 */
-	skip?: boolean;
+	skip?: boolean | undefined;
 };
 
 /**
@@ -40,27 +40,27 @@ export type Warning = {
 	 * Expected message from the test case. Usually exported from the plugin.
 	 * Optional if `warnings` is used.
 	 */
-	message?: string;
+	message?: string | undefined;
 
 	/**
 	 * Expected line number of the warning.
 	 */
-	line?: number;
+	line?: number | undefined;
 
 	/**
 	 * Expected column number of the warning.
 	 */
-	column?: number;
+	column?: number | undefined;
 
 	/**
 	 * Expected end line number of the warning.
 	 */
-	endLine?: number;
+	endLine?: number | undefined;
 
 	/**
 	 * Expected end column number of the warning.
 	 */
-	endColumn?: number;
+	endColumn?: number | undefined;
 };
 
 /**
@@ -72,18 +72,18 @@ export type RejectTestCase = TestCase &
 		/**
 		 * Expected fixed code of the test case. Optional if `fix` isn't `true`.
 		 */
-		fixed?: string;
+		fixed?: string | undefined;
 
 		/**
 		 * Don't check the `fixed` code. Default: `false`.
 		 */
-		unfixable?: boolean;
+		unfixable?: boolean | undefined;
 
 		/**
 		 * Warning objects containing expected `message`, `line` and `column` etc.
 		 * Optional if `message` is used.
 		 */
-		warnings?: Warning[];
+		warnings?: Warning[] | undefined;
 	};
 
 /**
@@ -103,17 +103,17 @@ export type TestSchema = {
 	/**
 	 * Accept test cases.
 	 */
-	accept?: AcceptTestCase[];
+	accept?: AcceptTestCase[] | undefined;
 
 	/**
 	 * Reject test cases.
 	 */
-	reject?: RejectTestCase[];
+	reject?: RejectTestCase[] | undefined;
 
 	/**
 	 * Turn on autofix. Default: `false`.
 	 */
-	fix?: boolean;
+	fix?: boolean | undefined;
 
 	/**
 	 * Maps to Stylelint's `plugins` configuration property.
@@ -127,35 +127,35 @@ export type TestSchema = {
 	 *
 	 * @see https://stylelint.io/user-guide/configure#plugins
 	 */
-	plugins?: import('stylelint').Config['plugins'];
+	plugins?: import('stylelint').Config['plugins'] | undefined;
 
 	/**
 	 * Maps to Stylelint's `customSyntax` option.
 	 *
 	 * @see https://stylelint.io/user-guide/usage/options#customsyntax
 	 */
-	customSyntax?: string;
+	customSyntax?: string | undefined;
 
 	/**
 	 * Maps to Stylelint's `codeFilename` option.
 	 *
 	 * @see https://stylelint.io/user-guide/usage/options#codefilename
 	 */
-	codeFilename?: string;
+	codeFilename?: string | undefined;
 
 	/**
-	 * Maps to Jest's `test.only`. Default: `false`.
+	 * Whether to run only the test case. Default: `false`.
 	 *
-	 * @see https://jestjs.io/docs/en/api#testonlyname-fn-timeout
+	 * @see https://nodejs.org/api/test.html#only-tests
 	 */
-	only?: boolean;
+	only?: boolean | undefined;
 
 	/**
-	 * Maps to Jest's `test.skip`. Default: `false`.
+	 * Whether to skip the test case. Default: `false`.
 	 *
-	 * @see https://jestjs.io/docs/api#testskipname-fn
+	 * @see https://nodejs.org/api/test.html#skipping-tests
 	 */
-	skip?: boolean;
+	skip?: boolean | undefined;
 };
 
 /**
@@ -167,17 +167,43 @@ export function testRule(schema: TestSchema): void;
  * A test case for a rule configuration.
  */
 export type RuleConfigTestCase = {
+	/**
+	 * Config of the test case.
+	 */
 	config: unknown;
-	description?: string;
-	only?: boolean;
-	skip?: boolean;
+
+	/**
+	 * Description of the test case.
+	 */
+	description?: string | undefined;
+
+	/**
+	 * Whether to run only the test case. Default: `false`.
+	 *
+	 * @see https://nodejs.org/api/test.html#only-tests
+	 */
+	only?: boolean | undefined;
+
+	/**
+	 * Whether to skip the test case. Default: `false`.
+	 *
+	 * @see https://nodejs.org/api/test.html#skipping-tests
+	 */
+	skip?: boolean | undefined;
 };
 
 /**
  * A test schema for a rule configuration.
  */
 export type RuleConfigTestSchema = Pick<TestSchema, 'ruleName' | 'plugins' | 'only' | 'skip'> & {
+	/**
+	 * Accept test cases.
+	 */
 	accept?: RuleConfigTestCase[];
+
+	/**
+	 * Reject test cases.
+	 */
 	reject?: RuleConfigTestCase[];
 };
 
