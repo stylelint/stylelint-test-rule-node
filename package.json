@@ -47,10 +47,7 @@
     "root": true
   },
   "npmpackagejsonlint": {
-    "extends": "@stylelint/npm-package-json-lint-config",
-    "rules": {
-      "require-main": "off"
-    }
+    "extends": "@stylelint/npm-package-json-lint-config"
   },
   "remarkConfig": {
     "plugins": [
@@ -58,7 +55,7 @@
     ]
   },
   "devDependencies": {
-    "@stylelint/npm-package-json-lint-config": "^5.0.0",
+    "@stylelint/npm-package-json-lint-config": "^5.0.1",
     "@stylelint/prettier-config": "^3.0.0",
     "@stylelint/remark-preset": "^5.0.0",
     "@tsconfig/node18": "^18.2.2",
