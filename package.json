@@ -7,6 +7,10 @@
     "test"
   ],
   "repository": "stylelint/stylelint-test-rule-node",
+  "funding": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/stylelint"
+  },
   "license": "MIT",
   "author": "stylelint",
   "type": "module",
@@ -22,6 +26,7 @@
     "lint:formatting": "prettier . --check",
     "lint:js": "eslint .",
     "lint:md": "remark . --quiet --frail",
+    "lint:packagejson": "npmPkgJsonLint .",
     "lint:types": "tsc",
     "release": "np --no-release-draft",
     "pretest": "npm run lint",
@@ -41,12 +46,19 @@
     "reportUnusedDisableDirectives": true,
     "root": true
   },
+  "npmpackagejsonlint": {
+    "extends": "@stylelint/npm-package-json-lint-config",
+    "rules": {
+      "require-main": "off"
+    }
+  },
   "remarkConfig": {
     "plugins": [
       "@stylelint/remark-preset"
     ]
   },
   "devDependencies": {
+    "@stylelint/npm-package-json-lint-config": "^5.0.0",
     "@stylelint/prettier-config": "^3.0.0",
     "@stylelint/remark-preset": "^5.0.0",
     "@tsconfig/node18": "^18.2.2",
