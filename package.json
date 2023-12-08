@@ -25,7 +25,7 @@
     "lint:types": "tsc",
     "release": "np --no-release-draft",
     "pretest": "npm run lint",
-    "test": "echo \"TODO\"",
+    "test": "node --test",
     "watch": "npm --ignore-scripts test -- --watch",
     "prepare": "husky install"
   },
@@ -61,6 +61,9 @@
     "remark-cli": "^12.0.0",
     "stylelint": "^16.0.0-3",
     "typescript": "^5.3.2"
+  },
+  "peerDependencies": {
+    "stylelint": "^16.0.0-3"
   },
   "engines": {
     "node": ">=18.12.0"
