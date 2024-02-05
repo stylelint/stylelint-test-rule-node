@@ -32,7 +32,7 @@
     "pretest": "npm run lint",
     "test": "node --test",
     "watch": "npm --ignore-scripts test -- --watch",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "lint-staged": {
     "*.js": "eslint --cache --fix",
@@ -61,12 +61,12 @@
     "@tsconfig/node18": "^18.2.2",
     "@tsconfig/strictest": "^2.0.2",
     "eslint": "^8.56.0",
-    "eslint-config-stylelint": "^20.0.0",
-    "husky": "^8.0.3",
-    "lint-staged": "^15.2.0",
+    "eslint-config-stylelint": "^21.0.0",
+    "husky": "^9.0.10",
+    "lint-staged": "^15.2.1",
     "np": "^9.2.0",
     "npm-run-all": "^4.1.5",
-    "prettier": "^3.1.1",
+    "prettier": "^3.2.4",
     "remark-cli": "^12.0.0",
     "stylelint": "^16.2.1",
     "typescript": "^5.3.3"
