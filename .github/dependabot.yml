@@ -11,7 +11,7 @@ updates:
     groups:
       development-dependencies:
         dependency-type: 'development'
-        exclude-patterns: ['stylelint']
+        exclude-patterns: ['stylelint', 'eslint']
 
   - package-ecosystem: github-actions
     directory: '/'
