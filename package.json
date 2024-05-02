@@ -60,16 +60,16 @@
     "@stylelint/remark-preset": "^5.0.0",
     "@tsconfig/node18": "^18.2.4",
     "@tsconfig/strictest": "^2.0.5",
-    "eslint": "^8.57.0",
+    "eslint": "^9.1.1",
     "eslint-config-stylelint": "^21.0.0",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
-    "np": "^10.0.2",
+    "np": "^10.0.5",
     "npm-run-all": "^4.1.5",
     "prettier": "^3.2.5",
-    "remark-cli": "^12.0.0",
+    "remark-cli": "^12.0.1",
     "stylelint": "^16.4.0",
-    "typescript": "^5.4.3"
+    "typescript": "^5.4.5"
   },
   "peerDependencies": {
     "stylelint": "^16.0.1"
