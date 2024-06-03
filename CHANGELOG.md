@@ -2,7 +2,7 @@
 
 ## Head
 
-- Fixed: missing `funding` field in `package.json`.
+- Fixed: missing GitHub Sponsor for `funding` field in `package.json`.
 
 ## 0.2.1
 
