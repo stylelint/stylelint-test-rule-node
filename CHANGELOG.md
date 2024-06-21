@@ -1,6 +1,6 @@
 # Changelog
 
-## Head
+## 0.2.2
 
 - Fixed: missing GitHub Sponsor for `funding` field in `package.json`.
 
