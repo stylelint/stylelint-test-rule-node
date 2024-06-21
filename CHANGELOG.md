@@ -1,5 +1,9 @@
 # Changelog
 
+## Head
+
+- Fixed: missing GitHub Sponsor for `funding` field in `package.json`.
+
 ## 0.2.1
 
 - Fixed: an empty string in `fixed` property to be allowed.
