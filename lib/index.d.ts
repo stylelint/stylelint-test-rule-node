@@ -8,6 +8,11 @@ export type TestCase = {
 	code: string;
 
 	/**
+	 * A filename for this `code` property.
+	 */
+	codeFilename?: string;
+
+	/**
 	 * Description of the test case.
 	 */
 	description?: string | undefined;
