@@ -61,7 +61,7 @@
     ]
   },
   "devDependencies": {
-    "@stylelint/npm-package-json-lint-config": "^5.0.1",
+    "@stylelint/npm-package-json-lint-config": "^5.1.0",
     "@stylelint/prettier-config": "^3.0.0",
     "@stylelint/remark-preset": "^5.1.1",
     "@tsconfig/node18": "^18.2.4",
