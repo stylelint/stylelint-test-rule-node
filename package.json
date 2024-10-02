@@ -66,7 +66,7 @@
     "@stylelint/remark-preset": "^5.1.1",
     "@tsconfig/node18": "^18.2.4",
     "@tsconfig/strictest": "^2.0.5",
-    "eslint": "^8.57.0",
+    "eslint": "^9.11.1",
     "eslint-config-stylelint": "^22.0.0",
     "husky": "^9.1.6",
     "lint-staged": "^15.2.10",
