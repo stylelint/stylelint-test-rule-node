@@ -66,6 +66,13 @@ export type Warning = {
 	 * Expected end column number of the warning.
 	 */
 	endColumn?: number | undefined;
+
+	/**
+	 * Expected `EditInfo` of the warning.
+	 *
+	 * @experimental
+	 */
+	fix?: { range: [number, number]; text: string };
 };
 
 /**
@@ -119,6 +126,13 @@ export type TestSchema = {
 	 * Turn on autofix. Default: `false`.
 	 */
 	fix?: boolean | undefined;
+
+	/**
+	 * Turn on computing `EditInfo`. Default: `false`.
+	 *
+	 * @experimental
+	 */
+	computeEditInfo?: boolean;
 
 	/**
 	 * Maps to Stylelint's `plugins` configuration property.
