@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.0
+
+- Added: support for testing `computeEditInfo`.
+
 ## 0.3.0
 
 - Added: `codeFilename` option to `accept`/`reject` cases in `testRule` function.
