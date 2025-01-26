@@ -1,6 +1,6 @@
 {
   "name": "stylelint-test-rule-node",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "A Stylelint rule tester using Node.js built-in test runner.",
   "keywords": [
     "stylelint",
