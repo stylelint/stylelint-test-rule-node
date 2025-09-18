@@ -12,6 +12,8 @@ updates:
       development-dependencies:
         dependency-type: 'development'
         exclude-patterns: ['stylelint']
+    cooldown:
+      default-days: 7
 
   - package-ecosystem: github-actions
     directory: '/'
@@ -20,3 +22,5 @@ updates:
     open-pull-requests-limit: 3
     labels:
       - 'pr: dependencies'
+    cooldown:
+      default-days: 7
