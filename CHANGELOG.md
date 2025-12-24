@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.5.0
+
+- Removed: support for Node.js less than `20.19.0`
+- Added: `stylelint@17` to peer dependencies.
+
 ## 0.4.0
 
 - Added: support for testing `computeEditInfo`.
