@@ -2,8 +2,8 @@
 
 ## 0.5.0
 
+- Removed: `stylelint` less than `17.0.0` from peer dependencies.
 - Removed: support for Node.js less than `20.19.0`
-- Added: `stylelint@17` to peer dependencies.
 
 ## 0.4.0
 
