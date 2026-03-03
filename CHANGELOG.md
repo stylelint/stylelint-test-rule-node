@@ -1,6 +1,6 @@
 # Changelog
 
-## Head
+## 1.1.0
 
 - Changed: `stylelint` peer dependency to optional.
 
