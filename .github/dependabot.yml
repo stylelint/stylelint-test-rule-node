@@ -23,7 +23,7 @@ updates:
     labels:
       - 'pr: dependencies'
     groups:
-      stylelint:
+      stylelint-actions:
         patterns: ['stylelint/.github/*']
     cooldown:
       default-days: 7
