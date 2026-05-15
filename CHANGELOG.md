@@ -1,5 +1,10 @@
 # Changelog
 
+## Head
+
+- Added: support for testing `referenceFiles`.
+- Added: support for testing `languageOptions`.
+
 ## 1.1.0
 
 - Changed: `stylelint` peer dependency to optional.
