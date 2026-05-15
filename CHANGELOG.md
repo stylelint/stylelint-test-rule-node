@@ -1,6 +1,6 @@
 # Changelog
 
-## Head
+## 1.2.0
 
 - Added: support for testing `referenceFiles`.
 - Added: support for testing `languageOptions`.
