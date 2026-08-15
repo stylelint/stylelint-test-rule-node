@@ -12,8 +12,6 @@ updates:
       dev-deps:
         dependency-type: development
         exclude-patterns: ['stylelint']
-    cooldown:
-      default-days: 7
 
   - package-ecosystem: github-actions
     directory: '/'
@@ -26,5 +24,4 @@ updates:
       stylelint-actions:
         patterns: ['stylelint/.github/*']
     cooldown:
-      default-days: 7
       exclude: ['stylelint/.github/*']
