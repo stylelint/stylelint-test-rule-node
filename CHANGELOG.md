@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.2.1
+
+No consumer-facing change.
+
 ## 1.2.0
 
 - Added: support for testing `referenceFiles`.
