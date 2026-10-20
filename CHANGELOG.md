@@ -1,5 +1,9 @@
 # Changelog
 
+## Head
+
+- Added: `loadLint` option to `testRule` and `testRuleConfigs` functions.
+
 ## 1.2.1
 
 No consumer-facing change.

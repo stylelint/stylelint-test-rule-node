@@ -193,6 +193,11 @@ export type TestSchema = {
 	 * @see https://nodejs.org/api/test.html#skipping-tests
 	 */
 	skip?: boolean | undefined;
+
+	/**
+	 * Loads the `lint` function to test with. Default: `lint` from `stylelint`.
+	 */
+	loadLint?: () => Promise<import('stylelint').PublicApi['lint']>;
 };
 
 /**
@@ -232,7 +237,10 @@ export type RuleConfigTestCase = {
 /**
  * A test schema for a rule configuration.
  */
-export type RuleConfigTestSchema = Pick<TestSchema, 'ruleName' | 'plugins' | 'only' | 'skip'> & {
+export type RuleConfigTestSchema = Pick<
+	TestSchema,
+	'ruleName' | 'plugins' | 'only' | 'skip' | 'loadLint'
+> & {
 	/**
 	 * Accept test cases.
 	 */
