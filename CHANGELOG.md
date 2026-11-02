@@ -3,7 +3,7 @@
 ## 2.0.0
 
 - Removed: `stylelint` less than `18.0.0` from peer dependencies.
-- Removed: support for end-of-life and older versions of Node.js
+- Removed: support for end-of-life and older versions of Node.js.
 
 ## 1.3.0
 
